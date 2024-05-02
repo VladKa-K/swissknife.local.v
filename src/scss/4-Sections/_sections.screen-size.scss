@@ -1,0 +1,18 @@
+.s-screen-size {
+    @apply py-24;
+}
+
+.s-screen-size__content {
+    @apply text-center font-bold text-4xl mb-24 bg-dark-green py-11 rounded-3xl text-white;
+    @apply lg:text-6xl lg:mb-8;
+    @apply 2xl:text-7xl;
+}
+
+.s-screen-size__title {
+    @apply font-bold text-4xl mb-6;
+    @apply lg:text-5xl lg:mb-8;
+    @apply 2xl:text-6xl;
+}
+
+.s-screen-size__description {
+}

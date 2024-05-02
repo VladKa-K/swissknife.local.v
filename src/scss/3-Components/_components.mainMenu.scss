@@ -1,0 +1,36 @@
+.c-main-menu {
+    @apply hidden absolute bg-dark-green top-[calc(100%+16px)] left-0 w-screen text-center;
+    @apply md:block md:static md:bg-transparent md:w-auto;
+    @apply transition-all duration-300 ease-out;
+}
+
+.c-main-menu.is-active {
+    @apply block h-[calc(100vh-90px)];
+    @apply md:h-auto;
+}
+
+.c-main-menu__list {
+    @apply flex flex-col gap-4 px-4 py-6 h-full overflow-auto;
+    @apply md:flex-row md:p-0 md:gap-x-7 md:overflow-visible;
+}
+
+.c-main-menu__list-item {
+
+    a {
+        @apply font-medium text-lg text-white py-2 px-3 block rounded-xl;
+        @apply transition-all duration-300 ease-in-out;
+
+
+        @media(max-width: 767px) {
+            &:hover {
+                box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                background: linear-gradient(168deg, #1F4E3D, #49A760, #fff);
+            }
+        }
+    }
+
+    a.is-active {
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        background: linear-gradient(168deg, #1F4E3D, #49A760, #fff);
+    }
+}

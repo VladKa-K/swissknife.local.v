@@ -1,0 +1,122 @@
+.o-header {
+    @apply sticky top-0 z-[9999] bg-light-green py-4;
+    @apply transition-all duration-300;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+.o-header__wrap {
+    @apply flex items-center justify-between gap-x-5;
+}
+
+.o-heaer__nav-search {
+    @apply flex items-center gap-x-6;
+}
+
+.o-header__logo {
+    @apply inline-block;
+    
+    img {
+        @apply transition-all duration-300;
+        @apply max-w-[60px];
+    }
+}
+
+.o-header__menu {
+    
+}
+
+.o-header__menu-btn {
+    @apply w-6 h-5 cursor-pointer relative;
+    @apply md:hidden;
+
+    span {
+        @apply w-full h-[2px] rounded-2xl bg-dark absolute left-0;
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    span:nth-child(1) {
+        @apply top-0;
+    }
+
+    span:nth-child(2) {
+        @apply top-1/2 transform -translate-y-1/2;
+    }
+
+    span:nth-child(3) {
+        @apply bottom-0;
+    }
+}
+
+.o-header__menu-btn.is-active {
+
+    span:nth-child(1) {
+        @apply top-1/2 transform -translate-y-1/2 rotate-[225deg];
+    }
+    
+    span:nth-child(2) {
+        @apply opacity-0;
+        @apply top-1/2 transform -translate-y-1/2;
+    }
+
+    span:nth-child(3) {
+        @apply bottom-1/2 transform translate-y-1/2 -rotate-[225deg];
+    }
+}
+
+.o-heaer__search {
+
+    button {
+        @apply transition-all duration-300;
+    
+        &:hover {
+            @apply opacity-70;
+        }
+    }
+}
+
+.o-heaer__search-input-wrap {
+    @apply absolute right-[40px] top-0 w-0 h-full bg-light-green flex items-center px-4 opacity-0;
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.o-heaer__search-input-wrap.is-active {
+    @apply w-[calc(100%-40px)] opacity-100;
+}
+
+.o-heaer__search-input {
+    @apply block w-full bg-light-green placeholder:text-dark outline-none border-b border-b-dark px-2 py-3 text-lg;
+}
+
+.o-heaer__search-results {
+    @apply absolute w-[calc(100%-32px)] bg-white top-full rounded-b-md overflow-hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+
+    li {
+        @apply font-medium text-lg;
+
+        a {
+            @apply block hover:bg-light-grey p-2;
+            @apply transition-all duration-300;
+        }
+    }
+}
+
+.o-header.scrolled {
+    
+    .o-header__logo {
+    
+        img {
+            @apply max-w-[40px];
+        }
+    }
+}
+
+.o-heder__highlight {
+    @apply transition-all duration-300 ease-in-out absolute top-0 left-0 -z-[1] rounded-xl block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: linear-gradient(168deg, #1F4E3D, #49A760, #fff);
+}
+
+.o-heder__highlight[style] {
+    @apply px-3 py-2;
+}
